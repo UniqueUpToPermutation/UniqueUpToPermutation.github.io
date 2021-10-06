@@ -9,7 +9,7 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="/assets/main/css/main.css?v=0e521d223a" />
+    <link rel="stylesheet" type="text/css" href="/assets/main/css/main.css?v=2d6c167b64" />
 
     <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="canonical" href="https://uniqueuptopermutation.github.io/diffeqstochasticspart2/" />
@@ -23,9 +23,9 @@
     <meta property="og:url" content="https://uniqueuptopermutation.github.io/diffeqstochasticspart2/" />
     <meta property="og:image" content="https://uniqueuptopermutation.github.io/content/images/2021/04/Logo-Stochastic-processes-_NEW2_.jpg" />
     <meta property="article:published_time" content="2021-04-23T01:08:27.000Z" />
-    <meta property="article:modified_time" content="2021-04-23T01:24:54.000Z" />
-    <meta property="article:tag" content="Math" />
+    <meta property="article:modified_time" content="2021-10-06T17:14:33.000Z" />
     <meta property="article:tag" content="Tutorial" />
+    <meta property="article:tag" content="Math" />
     
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Differential Equations from Stochastic Processes: Part II" />
@@ -35,7 +35,7 @@
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Philip Etter" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Math, Tutorial" />
+    <meta name="twitter:data2" content="Tutorial, Math" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="1200" />
     
@@ -71,14 +71,14 @@
     "headline": "Differential Equations from Stochastic Processes: Part II",
     "url": "https://uniqueuptopermutation.github.io/diffeqstochasticspart2/",
     "datePublished": "2021-04-23T01:08:27.000Z",
-    "dateModified": "2021-04-23T01:24:54.000Z",
+    "dateModified": "2021-10-06T17:14:33.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://uniqueuptopermutation.github.io/content/images/2021/04/Logo-Stochastic-processes-_NEW2_.jpg",
         "width": 1200,
         "height": 1200
     },
-    "keywords": "Math, Tutorial",
+    "keywords": "Tutorial, Math",
     "description": "A tutorial on the deep connection between elliptic/parabolic systems and stochastic processes. The connection gives a lot of useful intuition about how to interpret elliptic/parabolic PDEs as well as Laplacian systems on graphs. Part II covers continuous time stochastic processes.",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -158,7 +158,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script><style>:root {--ghost-accent-color: #1d5d72;}</style>
 
 </head>
-<body class="is-preload post-template tag-math tag-tutorial">
+<body class="is-preload post-template tag-tutorial tag-math">
 
     <div id="wrapper">
         <main id="main">
@@ -230,7 +230,8 @@
 <p>$$\left[\mu(x) \cdot \nabla + \frac{1}{2} \sigma(x)^2 \, \Delta\right] u(x) = -f(x) \qquad \text{on } \Omega, $$</p>
 <p>$$u(x) = g(x) \qquad \text{on } \partial \Omega, $$</p>
 <p>then it satisfies</p>
-<p>$$ u(x) = \mathbb{E} \left[ \int_0^T -\mathcal{L} u (X_t) \, dt + u(X_T)  \mid X_0 = x\right] = \mathbb{E} \left[ \int_0^T f(X_t) \, dt + g(X_T)  \mid X_0 = x\right], $$</p>
+<p>$$ u(x) = \mathbb{E} \left[ \int_0^T -\mathcal{L} u (X_t) \, dt + u(X_T)  \mid X_0 = x\right] $$</p>
+<p>$$= \mathbb{E} \left[ \int_0^T f(X_t) \, dt + g(X_T)  \mid X_0 = x\right], $$</p>
 <p>where</p>
 <p>$$dX_t = \mu(X_t) \cdot dt + \sigma(X_t) \, dB_t^n.$$<br>
 This is the probabilistic interpretation of elliptic PDEs.</p>
@@ -244,7 +245,8 @@ This is the probabilistic interpretation of elliptic PDEs.</p>
 <p>Another outcome of this probabilistic form is the maximum principle. Suppose that \(\mathcal{L}\) is an infinitesimal generator of some stochastic process \(X_t \in \mathbb{R}^n\), and suppose that the function \(u(x)\) satisfies</p>
 <p>$$\mathcal{L} u(x) \geq 0,\qquad \text{on } \Omega.$$</p>
 <p>When \(\mathcal{L} = \Delta\), the function \(u(x)\) is called <strong>subharmonic</strong> on \(\Omega\). If this is the case, then from the probabilistic interpretation of \(u(x)\) in the previous section, we have that</p>
-<p>$$u(x) = \mathbb{E} \left[ \int_0^T -\mathcal{L} u (X_t) \, dt + u(X_T)  \mid X_0 = x\right] \leq \mathbb{E} \left[ u(X_T) \mid X_0 = x\right] \leq \sup_{x \in \partial \Omega} u(x).$$</p>
+<p>$$u(x) = \mathbb{E} \left[ \int_0^T -\mathcal{L} u (X_t) \, dt + u(X_T)  \mid X_0 = x\right] $$</p>
+<p>$$\leq \mathbb{E} \left[ u(X_T) \mid X_0 = x\right] \leq \sup_{x \in \partial \Omega} u(x).$$</p>
 <p>This is the continuous analogue of the discrete maximum principle we saw earlier in the tutorial.</p>
 <h3 id="hitting-time-problems">Hitting Time Problems</h3>
 <p>Suppose that we have a stochastic process \(X_t\) on \(\Omega \subset \mathbb{R}^n\) given by</p>
@@ -307,7 +309,7 @@ $$u(x) = 0 \qquad \text{on } \partial \Omega.$$</p>
 <p>$$\int_0^\tau \int_{\mathbb{R}^n} \pi(x, t) \, \left(-\frac{\partial}{\partial t} - \mathcal{L}\right)  \phi(x, t) \, dx \, dt = 0$$</p>
 <p>This is the weak form of the forward Kolmogorov equation (sometimes called the Fokker-Planck equation). The distribution \(\pi_t\) must satisfy the above weak PDE. To obtain the strong form of the PDE, we must assume that \(\pi_t\) is once differentiable in time and twice differentiable in space. If we do this, we can integrate the above expression by parts to get</p>
 <p>$$\int_0^\tau \int_{\mathbb{R}^n}  \phi(x, t) \left(\frac{\partial}{\partial t} - \mathcal{L}^*\right) \, \pi(x, t) \, dx \, dt = 0,$$</p>
-<p>where the boundary terms vanish because \(\phi\) is compactly supported and vanishes when \(t = 0\) or \(t = \tau\), and the operator \(\mathcal{L}^<em>\) is the <strong>adjoint</strong> of \(\mathcal{L}\) (think of it like the matrix tranpose). The operator \(\mathcal{L}^</em>\) can be written out as</p>
+<p>where the boundary terms vanish because \(\phi\) is compactly supported and vanishes when \(t = 0\) or \(t = \tau\), and the operator \(\mathcal{L}^*\) is the <strong>adjoint</strong> of \(\mathcal{L}\) (think of it like the matrix tranpose). The operator \(\mathcal{L}^*\) can be written out as</p>
 <p>$$\mathcal{L}^* \pi = - \nabla \cdot (\mu(x) \pi(x,t)) + \frac{1}{2} \Delta (\sigma^2(x) \pi(x,t)).$$</p>
 <p>Note that there is a negative sign on the \(\nabla\), but there is not a negative sign on the \(\Delta\). This comes from the fact that \(\Delta\) is integrated by parts twice, whereas \(\nabla\) is integrated only once. Now, since it is the case that this must be true for any such test function \(\phi\), it must be that</p>
 <p>$$\left(\frac{\partial}{\partial t} - \mathcal{L}^*\right) \phi(x, t) = 0$$</p>
@@ -335,7 +337,7 @@ $$u(x) = 0 \qquad \text{on } \partial \Omega.$$</p>
 $$\mathbb{E}[g(X_t)] = g^T \pi_t = g^T (P^T)^t \pi_0 = (P^t g)^T \pi_0 = \mathbb{E}[(P^t g)(X_0)].$$</p>
 <p>We see that by either choosing to group the time evolution operator \(P^T\) with the probability distribution \(\pi_0\) or the test function \(g\) we either evolve the probability distribution forward in time or the test function \(g\) backward in time (via \(P\)).</p>
 <p>In short, the forward Kolmogorov equation evolves distributions forward in time, while the backward Kolmogorov equation evolves test functions backward in time.</p>
-<h3 id="time-reversal-and-the-feynman-interpretation">Time Reversal and the Feynman Interpretation</h3>
+<h3 id="the-feynman-kac-formula">The Feynman-Kac Formula</h3>
 <p>A way to put the backward Kolmogorov equation into a more palatable form is by <em>time reversing</em> it. Let us denote \(q = -t\). Then, we have that</p>
 <p>$$dq = - dt.$$</p>
 <p>And we also have that</p>
@@ -351,7 +353,7 @@ $$V(x, 0) = g(x), $$</p>
 $$u(x, t) = \mathbb{E}\left[\int_0^t f(X_s, s) \, ds + g(X_0) \mid X_t = x\right],$$</p>
 <p>where \(X_t\) is the stochastic process given by<br>
 $$dX_t = \mu(X_t) \cdot dt + \sigma(X_t) \, dB_t^n.$$</p>
-<p>We can therefore think of the forward equation as performing a weighted sum over all paths the process \(X_t\) can take to reach location \(x\) and \(t\), where the weight of a specific instance of the path is proportional to \(\int_0^t f(X_t, t) \, dt + g(X_0)\). You may have heard of the famous <strong>Feynman integral</strong> from quantum mechanics, this is a close cousin of that integral (in fact, the Feynman integral is this integral extended to imaginary values of time). The idea is you can evaluate \(u(x, t)\) by summing over all paths that \(X_t\) can take to get to \(x\) at time \(t\).  Alternatively, we can think of the above expression in its time-reversed form, i.e., instead of using \(X_t\), we time reverse \(X_t\) to get the process \(Y_t\), given by</p>
+<p>We can therefore think of the forward equation as performing a weighted sum over all paths the process \(X_t\) can take to reach location \(x\) and \(t\), where the weight of a specific instance of the path is proportional to \(\int_0^t f(X_t, t) \, dt + g(X_0)\). You may have heard of the famous <strong>Feynman integral</strong> from quantum mechanics, this is a close cousin of that integral. The idea is you can evaluate \(u(x, t)\) by summing over all paths that \(X_t\) can take to get to \(x\) at time \(t\).  Alternatively, we can think of the above expression in its time-reversed form, i.e., instead of using \(X_t\), we time reverse \(X_t\) to get the process \(Y_t\), given by</p>
 <p>$$dY_t = -\mu(X_t) \cdot dt - \sigma(X_t) \, dB_t^n,$$</p>
 <p>and we can evaluate</p>
 <p>$$u(x, t) = \mathbb{E}\left[\int_0^t f(Y_s, t - s) \, ds + g(Y_t) \mid Y_0 = x\right].$$</p>
@@ -366,7 +368,8 @@ $$dX_t = \mu(X_t) \cdot dt + \sigma(X_t) \, dB_t^n.$$</p>
 <p>A cool corollary of the above probabilistic expression is the maximum principle for parabolic equations. Suppose that \(u(x, t)\) is defined on \(\mathbb{R}^n \times [0, \tau]\) and satisfies</p>
 <p>$$\left(\frac{\partial}{\partial  t} - \mathcal{L} \right) u \leq 0,$$</p>
 <p>for the infinitesimal generator \(\mathcal{L}\) of some stochastic process \(X_t\). Then it follows that</p>
-<p>$$u(x, t) = \mathbb{E}\left[\int_0^t \left(\frac{\partial}{\partial  t} - \mathcal{L} \right) u(Y_s, t - s)  \, ds + u(Y_t, 0) \mid Y_0 = x\right] \leq \mathbb{E}[u(Y_t, 0) \mid Y_0 = x] \leq \sup_{y} u(y, 0) .$$</p>
+<p>$$u(x, t) = \mathbb{E}\left[\int_0^t \left(\frac{\partial}{\partial  t} - \mathcal{L} \right) u(Y_s, t - s)  \, ds + u(Y_t, 0) \mid Y_0 = x\right]$$</p>
+<p>$$\leq \mathbb{E}[u(Y_t, 0) \mid Y_0 = x] \leq \sup_{y} u(y, 0) .$$</p>
 <p>Likewise, if \(u(x, t)\) is defined on a domain \(\Omega \times [0, \tau]\), then we have</p>
 <p>$$u(x, t) \leq \max \left( \sup_{y \in \partial \Omega, s \in [0, \tau]} u(y, s), \qquad \sup_{y \in \Omega} u(y, 0) \right).$$</p>
 <h3 id="stationary-distribution-problems">Stationary Distribution Problems</h3>
@@ -418,7 +421,7 @@ $$dX_t = \mu(X_t) \cdot dt + \sigma(X_t) \, dB_t^n.$$</p>
                 <section class="author-box-content">
                     <div class="author-box-label">Author</div>
                     <h5 class="author-box-name">Philip Etter</h5>
-                    <p>I&#x27;m a fourth year PhD student at the Stanford Institute for Computational and Mathematical Engineering. I like to identify as a mathemagician - and sometimes also an amateur composer.</p>
+                    <p>I&#x27;m a fifth year PhD student at the Stanford Institute for Computational and Mathematical Engineering. I like to identify as a mathemagician - and sometimes also an amateur composer.</p>
                 </section>
             </a>
         </div>
@@ -467,16 +470,16 @@ $$dX_t = \mu(X_t) \cdot dt + \sigma(X_t) \, dB_t^n.$$</p>
             </header>
             <div class="mini-posts">
                     <article>
+                        <h3><a href="/online-basis-refinement-and-compression-for-reduced-order-models/">Online Basis Refinement and Compression for Reduced-Order Models</a></h3>
+                        <p>Online adaptive basis refinement and compression for reduced-order models via vector-space sievingIn many applications, projection-based</p>
+                    </article>
+                    <article>
                         <h3><a href="/renderingtheory1/">Rendering Theory I: Radiative Transport</a></h3>
                         <p>The first in a series of tutorials about the mathematical underpinnings of offline and real-time physically based rendering. This tutorial covers the differential formulation of radiative transport.</p>
                     </article>
                     <article>
                         <h3><a href="/coarse-proxy-model-order-reduction-for-integral-equations/">Coarse Proxy Reduced Basis Methods for Integral Equations</a></h3>
                         <p>In this paper, we present a novel method for building reduced basis models for integral equations.</p>
-                    </article>
-                    <article>
-                        <h3><a href="/diffeqstochasticspart2/">Differential Equations from Stochastic Processes: Part II</a></h3>
-                        <p>A tutorial on the deep connection between elliptic/parabolic systems and stochastic processes. The connection gives a lot of useful intuition about how to interpret elliptic/parabolic PDEs as well as Laplacian systems on graphs. Part II covers continuous time stochastic processes.</p>
                     </article>
             </div>
         </section>
@@ -492,11 +495,11 @@ $$dX_t = \mu(X_t) \cdot dt + \sigma(X_t) \, dB_t^n.$$</p>
 
     </div>
 
-    <script src="/assets/main/js/jquery.min.js?v=0e521d223a"></script>
-    <script src="/assets/main/js/browser.min.js?v=0e521d223a"></script>
-    <script src="/assets/main/js/breakpoints.min.js?v=0e521d223a"></script>
-    <script src="/assets/main/js/util.js?v=0e521d223a"></script>
-    <script src="/assets/main/js/main.js?v=0e521d223a"></script>
+    <script src="/assets/main/js/jquery.min.js?v=2d6c167b64"></script>
+    <script src="/assets/main/js/browser.min.js?v=2d6c167b64"></script>
+    <script src="/assets/main/js/breakpoints.min.js?v=2d6c167b64"></script>
+    <script src="/assets/main/js/util.js?v=2d6c167b64"></script>
+    <script src="/assets/main/js/main.js?v=2d6c167b64"></script>
 
     
 
